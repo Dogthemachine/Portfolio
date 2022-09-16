@@ -63,4 +63,59 @@
         text-decoration: none;
 }
 
+.text {
+        position: relative;
+        z-index: 10;
+        margin-top: 100px;
+}
+
+.text h2 {
+        font-size: 3em;
+        font-weight: 600;
+        line-height: 0.8em;
+        margin-top: 100px;
+        text-transform: uppercase;
+}
+
+.text h3 {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 0.8em;
+        text-transform: uppercase;
+}
+
+.text p {
+        font-size: 1.1em;
+        margin: 20px 0;
+        font-weight: 400;
+        font-width: 700px;
+}
+
+.social {
+        position: absolute;
+        bottom: 20px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.social li {
+        list-style: none;
+}
+
+.social li a {
+        display: inline-block;
+        filter: invert(1);
+        margin-right: 20px;
+        transform: scale(0.25);
+        transition: 0.5s;
+}
+
+.social li a:hover {
+        transform: scale(0.25) translateY(-30px);
+}
+
+
+
 
