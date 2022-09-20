@@ -1,5 +1,6 @@
 from django.db import models
 from django_resized import ResizedImageField
+from django.core.validators import FileExtensionValidator
 
 
 class Photos(models.Model):

@@ -3,6 +3,11 @@ from django.views import View
 from gallery.models import Photos, Videos
 
 
+class MainpageView(View):
+    def get(self, request):
+        return render(request, 'main.html')
+
+
 class VideoView(View):
     def get(self, request):
         try:

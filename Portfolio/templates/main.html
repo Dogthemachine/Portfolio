@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="showcase">
+	<header>
+		<h2 class="logo">
+			<a href="{% url 'video' %}">Video</a></h2>
+		<h2 class="logo">
+			<a href="{% url 'photo' %}">Photo</a></h2>
+	</header>
+
+	<video src="{{ STATIC_URL }}img/reel.mp4" muted loop autoplay></video>
+	<div class="overlay"></div>
+
+	<div class="text">
+		<h2>Photo & video production</h2>
+		<h3>Full cycle content creation</h3>
+		<p>High quality content for your blog, website or any personal needs. From scratch, started from idea generation up to finished commercial</p>
+	</div>
+	<ul class="social">
+	   <li><a href="https://www.facebook.com/pavel.danileyko/">
+			<img src="{{ STATIC_URL }}img/facebook.png" alt=""></a></li>
+	   <li><a href="https://www.instagram.com/photozanuda/">
+			<img src="{{ STATIC_URL }}img/instagram.png" alt=""></a></li>
+	   <li><a href="mailto:danileyko@gmail.com">
+			<img src="{{ STATIC_URL }}img/email.png" alt=""></a></li>
+	</ul>
+</section>
+
+{% endblock %}

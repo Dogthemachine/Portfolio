@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Video Photo Production</title>
+        <meta charset="UTF-8">
+        <meta name="Description" content="{% block description %}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{{ STATIC_URL }}img/icon-mini.png">
+
+        {% block css %}{% endblock %}
+        <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+
+    <script src="{{ STATIC_URL }}js/script.js"></script>
+
+</html>

@@ -20,7 +20,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '*' ]
 
 
 # Application definition
@@ -58,6 +58,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -109,21 +111,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = env('HU_STATIC_ROOT')
+STATIC_ROOT = env('PO_STATIC_ROOT')
 
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = env('HU_MEDIA_ROOT')
-
-LOCALE_PATHS = (
-  os.environ.get('TC_LOCALE_PATH'),
-)
+MEDIA_ROOT = env('PO_MEDIA_ROOT')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "assets"),
+    os.path.join(BASE_DIR, "assets/"),
 ]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
