@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,6 +7,65 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+.showcase {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 12%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+}
+
+@media screen and (max-width: 550px) {
+.showcase {
+    padding: 5%;
+    }
+}
+
+.showcase header {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 6% 14%;
+	z-index: 2000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.showcase header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*     VIDEO MAIN PAGE     */
+.showcase video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:url(
+		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABtJREFUGFdjZGBg+M/AwMDIAAVwBjYBsEoMFQBW5gIF0HSEnwAAAABJRU5ErkJggg==
+		) repeat;
+	mix-blend-mode: overlay;
+}
+
+/*
 .horizontal_vid {
     position: fixed;
     top: 50%;
@@ -38,86 +99,13 @@
     background: url(polina.jpg) no-repeat;
     background-size: cover;
 }
+*/
+/*     VIDEO MAIN PAGE     */
 
-
-.showcase {
-	position: absolute;
-	right: 0;
-	width: 100%;
-	min-height: 100vh;
-	padding: 5%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: #fff;
-}
-
-ul.social.d-flex.justify-content-center {
-    padding: 0rem !important;
-    margin-bottom: 0rem !important;
-}
-
-@media screen and (min-width: 550px) {
-.showcase {
-    padding: 12%;
-    }
-}
-
-.showcase header {
-	background-color: transparent;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 6% 14%;
-	z-index: 2000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.showcase header a {
-	color: #fff;
-	text-decoration: none;
-}
-
-.showcase video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background:url(
-		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABtJREFUGFdjZGBg+M/AwMDIAAVwBjYBsEoMFQBW5gIF0HSEnwAAAABJRU5ErkJggg==
-		) repeat;
-	mix-blend-mode: overlay;
-}
-
-.pages header {
-        background-color: transparent;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 40px 100px;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-}
-
-.pages header a {
-        color: black;
-        text-decoration: none;
+/*     TEXT MAIN PAGE     */
+.logo {
+    font-size: 1.5em;
+	font-weight: 600;
 }
 
 .text {
@@ -130,10 +118,9 @@ ul.social.d-flex.justify-content-center {
 	font-size: 3em;
 	font-weight: 600;
 	line-height: 0.8em;
-	margin-top: 100px;
+	margin-top: 5%;
 	text-transform: uppercase;
 }
-
 
 .text h3 {
     font-size: 2em;
@@ -142,6 +129,21 @@ ul.social.d-flex.justify-content-center {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 550px) {
+.text h2 {
+	font-size: 2.4em;
+	font-weight: 600;
+	line-height: 0.8em;
+	margin-top: 20%;
+	text-transform: uppercase;
+    }
+.text h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 0.8em;
+    text-transform: uppercase;
+    }
+}
 
 .text p {
 	font-size: 1.1em;
@@ -149,42 +151,28 @@ ul.social.d-flex.justify-content-center {
 	font-weight: 400;
 	font-width: 700px;
 }
+/*     TEXT MAIN PAGE     */
 
 /*     BOTTOM ICONS     */
 .social {
 	position: absolute;
 	bottom: 0% !important;
 	z-index: 10;
-}
-
-.social li {
-	list-style: none;
-	padding 0% !important;
-	margin 0% !important;
-}
-
-
-.social li a {
+	padding-left 0% !important;
+	margin-left 0% !important;
 	display: inline-block;
 	filter: invert(1);
-	margin-right: 20px;
-	transform: scale(0.25);
+	transform: scale(0.2);
 	transition: 0.5s;
-	padding 0% !important;
-	margin 0% !important;
-
+	text-align: center;
+	width: 100%;
+	display: flex;
+	align-items: center;
 }
 
-.social li a:hover {
-	transform: scale(0.25) translateY(-30px);
+.social :hover {
+	transform: scale(0.25) translateY(-10%);
 }
-
-@media screen and (min-width: 550px) {
-.showcase social {
-    padding: 6%;
-    }
-}
-
 /*     BOTTOM ICONS     */
 
 /*     PHOTO PAGE     */
