@@ -2,12 +2,16 @@ $(document).ready(function() {
 
 //-----------    CHANGE VIDEO     -----------
     const horizontal_vid = document.getElementById('horizontal_vid');
-    const vertical_vid = document.createElement('video');
-    vertical_vid.innerHTML = '<video playsinline autoplay muted loop poster="reel.jpg" id="vertical_vid"><source src="{{ STATIC_URL }}img/reel_v.webm" type="video/webm"><source src="{{ STATIC_URL }}img/reel_v.mp4" type="video/mp4"><source src="{{ STATIC_URL }}img/reel_v.ogv" type="video/ogv"></video>';
+    const vertical_vid = document.getElementById('vertical_vid');
 
     if (window.innerHeight > window.innerWidth) {
-        horizontal_vid.parentNode.replaceChild(vertical_vid, horizontal_vid);
+        horizontal_vid.remove();
+        console.log('horizontal_vid.remove()')
+    } else {
+        vertical_vid.remove();
+        console.log('vertical_vid.remove()')
     };
+
 //-----------   CHANGE VIDEO     -----------
 
 

@@ -10,6 +10,12 @@
 			<a href="{% url 'photo' %}">Photo</a></h2>
 	</header>
 
+	<video playsinline autoplay muted loop poster="reel.jpg" id="vertical_vid">
+		<source src="{{ STATIC_URL }}img/reel_v.webm" type="video/webm">
+		<source src="{{ STATIC_URL }}img/reel_v.mp4" type="video/mp4">
+		<source src="{{ STATIC_URL }}img/reel_v.ogv" type="video/ogv">
+	</video>';
+
 	<video playsinline autoplay muted loop poster="reel.jpg" id="horizontal_vid">
 		<source src="{{ STATIC_URL }}img/reel.webm" type="video/webm">
 		<source src="{{ STATIC_URL }}img/reel.mp4" type="video/mp4">
