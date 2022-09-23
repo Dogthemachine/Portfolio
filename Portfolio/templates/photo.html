@@ -2,11 +2,31 @@
 {% load static %}
 {% block content %}
 
-<section class="pages">
-    <header>
-        <h2 class="logo logo-pages"><a class="logo-pages"  href="{% url 'video' %}">Video</a></h2>
-        <h2 class="logo logo-pages"><a class="logo-pages"  href="{% url 'main' %}">Home</a></h2>
-    </header>
-</section>
+    <section class="pages">
+
+        <header>
+            <h2 class="logo logo-pages"><a class="logo-pages"  href="{% url 'video' %}">Video</a></h2>
+            <h2 class="logo logo-pages"><a class="logo-pages"  href="{% url 'main' %}">Home</a></h2>
+        </header>
+
+        <div class="row mt-4 collection-template__products" id="category-style">
+
+        <div class="container--wide">
+            <div class="row mt-4 collection-template__products" id="category-style">
+
+                {% if photos %}
+                    {% for photo in photos %}
+                        <div class="product-card has-hover-image mb-3">
+                            <a class="product-card__link-overlay" aria-label="">
+                                <img class='img-fluid' style="height:auto; width:100%;" src="{{ MEDIA_URL }}{{ photo.image }}"/>
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+        </div>
+
+    </section>
 
 {% endblock %}

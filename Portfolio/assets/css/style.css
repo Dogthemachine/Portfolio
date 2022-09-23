@@ -27,11 +27,22 @@
 	right: 0;
 	width: 100%;
 	min-height: 100vh;
-	padding: 100px;
+	padding: 5%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
+}
+
+ul.social.d-flex.justify-content-center {
+    padding: 0rem !important;
+    margin-bottom: 0rem !important;
+}
+
+@media screen and (min-width: 550px) {
+.showcase {
+    padding: 12%;
+    }
 }
 
 .showcase header {
@@ -40,7 +51,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 40px 100px;
+	padding: 6% 14%;
 	z-index: 2000;
 	display: flex;
 	align-items: center;
@@ -105,12 +116,14 @@
 	text-transform: uppercase;
 }
 
+
 .text h3 {
-        font-size: 2em;
-        font-weight: 600;
-        line-height: 0.8em;
-        text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 0.8em;
+    text-transform: uppercase;
 }
+
 
 .text p {
 	font-size: 1.1em;
@@ -119,18 +132,19 @@
 	font-width: 700px;
 }
 
+/*     BOTTOM ICONS     */
 .social {
 	position: absolute;
-	bottom: 20px;
+	bottom: 0% !important;
 	z-index: 10;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .social li {
 	list-style: none;
+	padding 0% !important;
+	margin 0% !important;
 }
+
 
 .social li a {
 	display: inline-block;
@@ -138,8 +152,40 @@
 	margin-right: 20px;
 	transform: scale(0.25);
 	transition: 0.5s;
+	padding 0% !important;
+	margin 0% !important;
+
 }
 
 .social li a:hover {
 	transform: scale(0.25) translateY(-30px);
 }
+
+@media screen and (min-width: 550px) {
+.showcase social {
+    padding: 6%;
+    }
+}
+
+/*     BOTTOM ICONS     */
+
+/*     PHOTO PAGE     */
+.collection-template__products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.container--wide {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card__image {
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 2rem !important;
+}
+/*     PHOTO PAGE     */
