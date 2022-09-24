@@ -24,3 +24,8 @@ class PhotoView(View):
             return render(request, 'photo.html', {'content': allphotos})
         except:
             return render(request, 'photo.html')
+
+
+class AboutView(View):
+    def get(self, request):
+        return render(request, 'about.html')

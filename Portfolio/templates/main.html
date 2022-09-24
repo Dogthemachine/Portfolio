@@ -2,39 +2,40 @@
 {% load static %}
 {% block content %}
 
-<section class="showcase">
-	<header>
-		<h2 class="logo">
-			<a href="{% url 'video' %}">Video</a></h2>
-		<h2 class="logo">
-			<a href="{% url 'photo' %}">Photo</a></h2>
-	</header>
+	<section class="showcase">
+		<header>
+			<h2 class="logo">
+				<a href="{% url 'video' %}">Video</a></h2>
+			<h2 class="logo">
+				<a href="{% url 'photo' %}">Photo</a></h2>
+		</header>
 
-	<video playsinline autoplay muted loop poster="reel.jpg" id="vertical_vid">
-		<source src="{{ STATIC_URL }}img/reel_v.webm" type="video/webm">
-		<source src="{{ STATIC_URL }}img/reel_v.mp4" type="video/mp4">
-		<source src="{{ STATIC_URL }}img/reel_v.ogv" type="video/ogv">
-	</video>';
+		<video playsinline autoplay muted loop poster="reel.jpg" id="vertical_vid">
+			<source src="{{ STATIC_URL }}img/reel_v.webm" type="video/webm">
+			<source src="{{ STATIC_URL }}img/reel_v.mp4" type="video/mp4">
+			<source src="{{ STATIC_URL }}img/reel_v.ogv" type="video/ogv">
+		</video>';
 
-	<video playsinline autoplay muted loop poster="reel.jpg" id="horizontal_vid">
-		<source src="{{ STATIC_URL }}img/reel.webm" type="video/webm">
-		<source src="{{ STATIC_URL }}img/reel.mp4" type="video/mp4">
-		<source src="{{ STATIC_URL }}img/reel.ogv" type="video/ogv">
-	</video>
+		<video playsinline autoplay muted loop poster="reel.jpg" id="horizontal_vid">
+			<source src="{{ STATIC_URL }}img/reel.webm" type="video/webm">
+			<source src="{{ STATIC_URL }}img/reel.mp4" type="video/mp4">
+			<source src="{{ STATIC_URL }}img/reel.ogv" type="video/ogv">
+		</video>
 
-	<div class="overlay"></div>
+		<div class="overlay"></div>
 
-	<div class="text">
-		<h2>Photo & video production</h2>
-		<h3>Full cycle content creation</h3>
-		<p>High quality content for your blog, website or any personal needs. From scratch, started from idea generation up to finished commercial</p>
-	</div>
+		<div class="text">
+			<h2>Photo & video production</h2>
+			<h3>Full cycle content creation</h3>
+			<p>High quality content for your blog, website or any personal needs. From scratch, started from idea generation up to finished commercial</p>
+			<a class="know_more" href="{% url 'about' %}">Know more</a>
+		</div>
 
-</section>
-	<div class="social d-flex justify-content-center">
-	   <a href="mailto:danileyko@gmail.com">
+	</section>
+
+	<div class="social">
+		<a href="mailto:danileyko@gmail.com">
 			<img src="{{ STATIC_URL }}img/email.png" alt=""></a>
 	</div>
-
 
 {% endblock %}

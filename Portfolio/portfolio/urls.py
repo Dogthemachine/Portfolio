@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.MainpageView.as_view(), name='main'),
     path('video/', views.VideoView.as_view(), name='video'),
     path('photo/', views.PhotoView.as_view(), name='photo'),
+    path('about/', views.AboutView.as_view(), name='about'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

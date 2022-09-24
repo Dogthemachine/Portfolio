@@ -2,14 +2,15 @@
 {% load static %}
 {% block content %}
 
-    <section class="pages">
+	<section class="showcase">
+		<header>
+			<h2 class="logo">
+				<a href="{% url 'video' %}" style="color: black;">Video</a></h>
+			<h2 class="logo">
+				<a href="{% url 'main' %}" style="color: black;">Home</a></h2>
+		</header>
 
-        <header>
-            <h2 class="logo logo-pages"><a class="logo-pages"  href="{% url 'video' %}">Video</a></h2>
-            <h2 class="logo logo-pages"><a class="logo-pages"  href="{% url 'main' %}">Home</a></h2>
-        </header>
-
-        <div class="row mt-4 collection-template__products" id="category-style">
+        <div class="row mt-4 collection-template__products">
 
         <div class="container--wide">
             <div class="row mt-4 collection-template__products" id="category-style">
