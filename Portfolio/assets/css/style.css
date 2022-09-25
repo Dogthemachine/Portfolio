@@ -142,14 +142,14 @@
 
 @media screen and (min-width: 1000px) {
     .text a {
-    margin-bottom: 3em;
+    margin-bottom: 4em;
     }
 }
 /*     TEXT MAIN PAGE     */
 
 /*     BOTTOM ICONS     */
 .social {
-	position: absolute;
+	position: fixed;
 	bottom: 0% !important;
 	z-index: 10;
 	display: inline-block;
@@ -169,8 +169,7 @@
 @media screen and (min-width: 1000px) {
     .social {
         position: fixed;
-        bottom:0%;
-        width:100%;
+        width: 100%;
     }
 }
 /*     BOTTOM ICONS     */
