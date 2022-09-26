@@ -7,7 +7,7 @@ class Photos(models.Model):
     photo = ResizedImageField(size=[2500, 2500], upload_to="photos/%Y/%m/%d")
 
     def __str__(self):
-        return u"%s (%s) (%s)" % (self.id)
+        return u"(%s)" % (self.id)
 
 
 class Videos(models.Model):
@@ -15,4 +15,4 @@ class Videos(models.Model):
                              validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
 
     def __str__(self):
-        return u"%s (%s) (%s)" % (self.id)
+        return u"(%s)" % (self.id)

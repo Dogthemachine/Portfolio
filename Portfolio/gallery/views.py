@@ -8,6 +8,12 @@ class MainpageView(View):
         return render(request, 'main.html')
 
 
+class PhotoView(View):
+    def get(self, request):
+        allphotos = Photos.objects.all()
+        return render(request, 'photo.html', {'allphotos': allphotos})
+
+
 class VideoView(View):
     def get(self, request):
         try:
@@ -15,15 +21,6 @@ class VideoView(View):
             return render(request, 'video.html', {'content': allvideos})
         except:
             return render(request, 'video.html')
-
-
-class PhotoView(View):
-    def get(self, request):
-        try:
-            allphotos = Photos.objects.all()
-            return render(request, 'photo.html', {'content': allphotos})
-        except:
-            return render(request, 'photo.html')
 
 
 class AboutView(View):

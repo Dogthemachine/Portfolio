@@ -10,18 +10,12 @@
 				<a href="{% url 'main' %}" style="color: black;">Home</a></h2>
 		</header>
 
-        <div class="row mt-4 collection-template__products">
-
         <div class="container--wide">
             <div class="row mt-4 collection-template__products" id="category-style">
 
-                {% if photos %}
-                    {% for photo in photos %}
-                        <div class="product-card has-hover-image mb-3">
-                            <a class="product-card__link-overlay" aria-label="">
-                                <img class='img-fluid' style="height:auto; width:100%;" src="{{ MEDIA_URL }}{{ photo.image }}"/>
-                            </a>
-                        </div>
+                {% if allphotos %}
+                    {% for photo in allphotos %}
+                            <img class='img-fluid' style="height:auto; width:100%;" src="{{ MEDIA_URL }}{{ photo.photo }}">
                     {% endfor %}
                 {% endif %}
 
