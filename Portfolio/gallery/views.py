@@ -18,7 +18,7 @@ class VideoView(View):
     def get(self, request):
         try:
             allvideos = Videos.objects.all()
-            return render(request, 'video.html', {'content': allvideos})
+            return render(request, 'video.html', {'allvideos': allvideos})
         except:
             return render(request, 'video.html')
 

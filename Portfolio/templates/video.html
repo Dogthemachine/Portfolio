@@ -2,19 +2,38 @@
 {% load static %}
 {% block content %}
 
-	<section class="showcase">
+	<div class="overlay-gallery"></div>
+
+	<section class="showcase" style="margin-bottom: 10% !important;">
 		<header>
-			<h2 class="logo">
-				<a href="{% url 'main' %}" style="color: black;">Home</a></h2>
-			<h2 class="logo">
-				<a href="{% url 'photo' %}" style="color: black;">Photo</a></h2>
+			<h2 class="logo" id="top-left">
+				<a href="{% url 'photo' %}" style="color: black; position: absolut;">Photo</a></h2>
+			<h2 class="logo" id="top-right">
+				<a href="{% url 'main' %}" style="color: black; position: absolut;">Home</a></h2>
 		</header>
+
+
+        <div class="column" style="margin-bottom: 30% !important;">
+            <div class="row mt-5 grid">
+
+                {% if allvideos %}
+                    {% for video in allvideos %}
+						<video width="320" height="240" class="img-fluid" controls c>
+							<source src="{{ MEDIA_URL }}{{ video.video }}" type="video/mp4"></video>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+        </div>
+
     </section>
 
-	<div class="social">
+	<div class="social-gallery">
 		<a href="mailto:danileyko@gmail.com">
 			<img src="{{ STATIC_URL }}img/email.png" alt=""></a>
 	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}js/gallery.js"></script>
 
 {% endblock %}
