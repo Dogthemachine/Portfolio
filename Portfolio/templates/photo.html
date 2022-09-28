@@ -2,20 +2,23 @@
 {% load static %}
 {% block content %}
 
-	<section class="showcase">
+	<div class="overlay-gallery"></div>
+
+	<section class="showcase" style="margin-bottom: 10% !important;">
 		<header>
-			<h2 class="logo">
-				<a href="{% url 'video' %}" style="color: black;">Video</a></h>
-			<h2 class="logo">
-				<a href="{% url 'main' %}" style="color: black;">Home</a></h2>
+			<h2 class="logo" id="top-left">
+				<a href="{% url 'video' %}" style="color: black; position: absolut;">Video</a></h2>
+			<h2 class="logo" id="top-right">
+				<a href="{% url 'main' %}" style="color: black; position: absolut;">Home</a></h2>
 		</header>
 
-        <div class="container--wide">
-            <div class="row mt-4 collection-template__products" id="category-style">
+
+        <div class="column" style="margin-bottom: 30% !important;">
+            <div class="row mt-5 grid">
 
                 {% if allphotos %}
                     {% for photo in allphotos %}
-                            <img class='img-fluid' style="height:auto; width:100%;" src="{{ MEDIA_URL }}{{ photo.photo }}">
+                            <img class="img-fluid fit-photo" src="{{ MEDIA_URL }}{{ photo.photo }}" id="{{ MEDIA_URL }}{{ photo.id }}">
                     {% endfor %}
                 {% endif %}
 
@@ -24,10 +27,12 @@
 
     </section>
 
-	<div class="social">
+	<div class="social-gallery">
 		<a href="mailto:danileyko@gmail.com">
 			<img src="{{ STATIC_URL }}img/email.png" alt=""></a>
 	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}js/gallery.js"></script>
 
 {% endblock %}

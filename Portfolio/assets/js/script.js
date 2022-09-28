@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
 //-----------    CHANGE VIDEO     -----------
     const horizontal_vid = document.getElementById('horizontal_vid');
     const vertical_vid = document.getElementById('vertical_vid');
