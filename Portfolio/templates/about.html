@@ -2,7 +2,6 @@
 {% load static %}
 {% block content %}
 
-
 	<section class="showcase">
 		<header>
 			<h2 class="logo">
@@ -11,6 +10,15 @@
 				<a href="{% url 'photo' %}" style="color: black;">Photo</a></h2>
 		</header>
 
+		<img class="ava" src="{{ STATIC_URL }}img/avatar.png">
+
+		<h3 style="z-index: 10;">
+			Hello! My name is <a href="https://www.facebook.com/pavel.danileyko/" target="_blank">Pavel Danileyko</a>. I am a professional photographer and video maker based in the Netherlands.
+			I studied in Ukraine at Kharkiv State Academy Of Culture on the faculty of cinema and television arts.
+			I have over ten years of experience in creating fine artistic content for commercial.
+			I can make photos or videos for you for representation your business or hobby or any kind ideas.
+			You can also invite me to projects with social benefit on a volunteer basis or offer me participation in creative projects.
+		</h3>
     </section>
 
 	<div class="social">
@@ -20,3 +28,6 @@
 
 
 {% endblock %}
+
+
+

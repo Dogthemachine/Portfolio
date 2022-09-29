@@ -4,7 +4,7 @@
 
 	<div class="overlay-gallery"></div>
 
-	<section class="showcase" style="margin-bottom: 10% !important;">
+	<section class="showcase">
 		<header>
 			<h2 class="logo" id="top-left">
 				<a href="{% url 'photo' %}" style="color: black; position: absolut;">Photo</a></h2>
@@ -13,12 +13,12 @@
 		</header>
 
 
-        <div class="column" style="margin-bottom: 30% !important;">
-            <div class="row mt-5 grid">
+        <div class="column">
+            <div class="row grid">
 
                 {% if allvideos %}
                     {% for video in allvideos %}
-						<video width="320" height="240" class="img-fluid" style="position: relative;" controls>
+						<video width="320" height="240" class="img-fluid mt-2" style="position: relative;" controls>
 							<source src="{{ MEDIA_URL }}{{ video.video }}" type="video/mp4"></source>
 						</video>
                     {% endfor %}
@@ -35,6 +35,6 @@
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="{{ STATIC_URL }}js/gallery.js"></script>
+    <script src="{{ STATIC_URL }}js/gallery_vid.js"></script>
 
 {% endblock %}

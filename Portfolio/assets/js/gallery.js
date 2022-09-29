@@ -35,8 +35,6 @@ $(document).ready(function() {
 
     for (i = 0; i < all_photos.length; i++) {
         all_photos[i].addEventListener("click", function() {
-
-
             if (this.classList.contains('active')) {
                 this.classList.remove('active');
             } else {

@@ -54,6 +54,10 @@ body {
 	transition: 0.5s;
 }
 
+.showcase h3 a {
+	color: #fff;
+	text-decoration: none;
+}
 
 /*     VIDEO MAIN PAGE     */
 .showcase video {
@@ -217,3 +221,17 @@ body {
     position: relative;
 }
 /*     PHOTO PAGE     */
+
+.ava {
+    border-radius: 50%;
+    width: 60%;
+    position: fixed;
+    text-align: center;
+    z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+.ava {
+    width: 90%;
+    }
+}
