@@ -18,8 +18,8 @@
 
                 {% if allvideos %}
                     {% for video in allvideos %}
-						<video width="320" height="240" class="img-fluid mt-2" style="position: relative;" controls>
-							<source src="{{ MEDIA_URL }}{{ video.video }}" type="video/mp4"></source>
+						<video width="320" height="240" class="img-fluid mt-3" style="position: relative;" controls>
+							<source src="{{ MEDIA_URL }}{{ video.video }}#t=0.001" type="video/mp4"></source>
 						</video>
                     {% endfor %}
                 {% endif %}

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  background: linear-gradient(white, gray, white);
+  background: linear-gradient(#F5F5F5, 	#C0C0C0, #DCDCDC);
 }
 
 * {
@@ -59,6 +59,16 @@ body {
 	text-decoration: none;
 }
 
+.showcase h3 {
+    top: 55%;
+    bottom: 15%;
+}
+
+@media screen and (min-width: 600px) {
+    .showcase h3 {
+        top: 65%;
+    }
+}
 /*     VIDEO MAIN PAGE     */
 .showcase video {
 	position: fixed;
@@ -205,7 +215,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5%;
+    grid-gap: 1.85%;
 }
 
 .fit-photo {
@@ -223,10 +233,13 @@ body {
 /*     PHOTO PAGE     */
 
 .ava {
-    border-radius: 50%;
-    width: 60%;
-    position: fixed;
+    position: absolute;
+    top: 10%;
+    width: 30%;
     text-align: center;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -0%);
     z-index: 2;
 }
 
