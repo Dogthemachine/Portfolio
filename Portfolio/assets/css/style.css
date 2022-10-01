@@ -61,7 +61,7 @@ body {
 
 .showcase h3 {
     top: 55%;
-    bottom: 15%;
+    max-width: 1200px;
 }
 
 @media screen and (min-width: 600px) {
@@ -168,7 +168,7 @@ body {
 
 /*     BOTTOM ICONS     */
 .social {
-	position: fixed;
+	position: relative;
 	bottom: 0% !important;
 	z-index: 10;
 	display: inline-block;
@@ -197,11 +197,20 @@ body {
 	transition: 0.5s;
 }
 
+.social-gallery :hover {
+	transform: scale(0.25) translateY(-50px);
+	transition: 0.5s;
+}
+
 @media screen and (min-width: 1000px) {
     .social {
         position: fixed;
         width: 100%;
     }
+}
+
+.about {
+    bottom: 5px;
 }
 /*     BOTTOM ICONS     */
 

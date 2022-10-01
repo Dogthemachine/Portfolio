@@ -5,11 +5,12 @@
 	<img class="ava" src="{{ STATIC_URL }}img/avatar.png">
 
 	<section class="showcase">
+
 		<header>
-			<h2 class="logo">
-				<a href="{% url 'video' %}" style="color: black;">Video</a></h2>
-			<h2 class="logo">
-				<a href="{% url 'photo' %}" style="color: black;">Photo</a></h2>
+			<h2 class="logo" id="top-left">
+				<a href="{% url 'video' %}" style="color: black; position: absolut;">Video</a></h2>
+			<h2 class="logo" id="top-right">
+				<a href="{% url 'main' %}" style="color: black; position: absolut;">Home</a></h2>
 		</header>
 
 		<h3 style="position: absolute;">
@@ -18,14 +19,15 @@
 			I have over ten years of experience in creating fine artistic content for commercial.
 			I can make photos or videos for you for representation your business or hobby or any kind ideas.
 			You can also invite me to projects with social benefit on a volunteer basis or offer me participation in creative projects.
+			<div class="social-gallery" style="position: relative; margin-top 99% !important;">
+				<a href="mailto:danileyko@gmail.com">
+					<img src="{{ STATIC_URL }}img/email.png" alt=""></a></div>
+			</div>
 		</h3>
+
     </section>
 
-	<div class="social" >
-		<a href="mailto:danileyko@gmail.com">
-			<img src="{{ STATIC_URL }}img/email.png" alt="" style="position: absolut;"></a>
-	</div>
-
+    <script src="{{ STATIC_URL }}js/gallery_about.js"></script>
 
 {% endblock %}
 
