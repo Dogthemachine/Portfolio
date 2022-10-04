@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('body').css({"background": "linear-gradient(#BEBEBE, #A9A9A9, #BEBEBE)"});
+    $('body').css({"background": "linear-gradient(#696969, #888888, #696969)"});
 
 //-----------    MOVE TOP LINKS     -----------
 
