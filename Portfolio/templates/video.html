@@ -18,8 +18,11 @@
 
                 {% if allvideos %}
                     {% for video in allvideos %}
-						<video width="320" height="240" class="img-fluid mt-3" style="position: relative;" controls>
-							<source src="{{ MEDIA_URL }}{{ video.video }}#t=0.001" type="video/mp4"></source>
+						<video itemtype="http://schema.org/VideoObject" class="img-fluid mt-3" style="position: relative;" poster="{{ MEDIA_URL }}{{ video.poster }}" controls>
+							<source src="{{ MEDIA_URL }}{{ video.video }}#t=0.001" type="video/mp4" />
+							<source src="{{ MEDIA_URL }}{{ video.video_webm }}#t=0.001" type="video/webm">
+							<meta itemprop="name" content="{{ MEDIA_URL }}{{ video.name }}">
+							<meta itemprop="thumbnail" content="{{ MEDIA_URL }}{{ video.poster }}">
 						</video>
                     {% endfor %}
                 {% endif %}
