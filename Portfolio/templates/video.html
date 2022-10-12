@@ -21,8 +21,9 @@
 						<video itemtype="http://schema.org/VideoObject" class="img-fluid mt-3" style="position: relative;" poster="{{ MEDIA_URL }}{{ video.poster }}" controls>
 							<source src="{{ MEDIA_URL }}{{ video.video }}#t=0.001" type="video/mp4" />
 							<source src="{{ MEDIA_URL }}{{ video.video_webm }}#t=0.001" type="video/webm">
-							<meta itemprop="name" content="{{ MEDIA_URL }}{{ video.name }}">
+							<meta itemprop="name" content="{{ video.name }}">
 							<meta itemprop="thumbnail" content="{{ MEDIA_URL }}{{ video.poster }}">
+							<meta itemprop="duration" content="{{ video.duration }}">
 						</video>
                     {% endfor %}
                 {% endif %}
